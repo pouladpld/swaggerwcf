@@ -10,6 +10,7 @@ using System.Text;
 using SwaggerWcf.Models;
 using SwaggerWcf.Support;
 using System.Runtime.CompilerServices;
+using Newtonsoft.Json;
 
 namespace SwaggerWcf
 {
@@ -49,10 +50,31 @@ namespace SwaggerWcf
         }
 
         [MethodImpl(MethodImplOptions.Synchronized)]
+        public static string GenerateSwaggerFile()
+        {
+            Service service = default;
+            string[] paths = GetAllPaths().Where(p => !SwaggerFiles.Keys.Contains(p)).ToArray();
+
+            foreach (string path in paths)
+            {
+                service = ServiceBuilder.Build("/");
+                service.Info = Info;
+                service.SecurityDefinitions = SecurityDefinitions;
+
+                string swagger = Serializer.Process(service);
+                if (SwaggerFiles.ContainsKey(path) == false)
+                    SwaggerFiles.Add(path, swagger);
+            }
+
+            string json = JsonConvert.SerializeObject(service);
+            return json;
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
         internal static void Init(Func<string, Service> buildService)
         {
             string[] paths = GetAllPaths().Where(p => !SwaggerFiles.Keys.Contains(p)).ToArray();
-            
+
             foreach (string path in paths)
             {
                 Service service = buildService(path);

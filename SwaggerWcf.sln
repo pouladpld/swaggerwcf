@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf.Test.Service", "test\SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{FD02752A-614D-4FAF-8994-519C754107B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerWcf.Builder", "src\SwaggerWcf.Builder\SwaggerWcf.Builder.csproj", "{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{69BD5855-3EE5-4C92-BB32-14C2EE0CD29B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9A7F52B5-D8E7-47A7-8CCD-AA2D46AB58E5}"
@@ -33,10 +31,6 @@ Global
 		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,7 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55} = {69BD5855-3EE5-4C92-BB32-14C2EE0CD29B}
 		{FD02752A-614D-4FAF-8994-519C754107B1} = {9A7F52B5-D8E7-47A7-8CCD-AA2D46AB58E5}
-		{1DF6A01F-07B4-4CA2-8E28-7FF08E52155C} = {69BD5855-3EE5-4C92-BB32-14C2EE0CD29B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F827EAE6-1674-4E2C-9B04-336A12138B47}
