@@ -82,7 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SwaggerWcf\SwaggerWcf.csproj">
+    <ProjectReference Include="..\..\src\SwaggerWcf\SwaggerWcf.csproj">
       <Project>{0ad6efbc-412f-4c0e-8e0a-0faf28151b55}</Project>
       <Name>SwaggerWcf</Name>
     </ProjectReference>
