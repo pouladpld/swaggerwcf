@@ -13,11 +13,14 @@ namespace SwaggerWcf.Schema2
         /// <summary>
         /// Required. Specifies the Swagger Specification version being used. It can be used by the Swagger UI and other clients to interpret the API listing. The value MUST be "2.0".
         /// </summary>
-        [JsonProperty(Required = Required.Always)]
-        public string Swagger => "2.0";
+        [JsonRequired]
+        public string Swagger = "2.0";
 
-        [JsonProperty(Required = Required.Always)]
-        public Info Info { get; set; }
+        /// <summary>
+        /// Required. Provides metadata about the API. The metadata can be used by the clients if needed.
+        /// </summary>
+        [JsonRequired]
+        public Info Info;
 
         /// <summary>
         /// The host (name or ip) serving the API. This MUST be the host only and does not include the scheme

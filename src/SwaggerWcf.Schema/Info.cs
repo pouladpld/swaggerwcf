@@ -1,17 +1,44 @@
-﻿namespace SwaggerWcf.Schema2
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
+namespace SwaggerWcf.Schema2
 {
+    /// <summary>
+    /// The object provides metadata about the API. The metadata can be used by the clients if needed, and can be presented in the Swagger-UI for convenience.
+    /// </summary>
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class Info
     {
-        public string Version { get; set; }
+        /// <summary>
+        /// Required. The title of the application.
+        /// </summary>
+        [JsonRequired]
+        public string Title;
 
-        public string Title { get; set; }
+        /// <summary>
+        /// Required Provides the version of the application API (not to be confused with the specification version).
+        /// </summary>
+        [JsonRequired]
+        public string Version;
 
-        public string Description { get; set; }
+        /// <summary>
+        /// A short description of the application. GFM syntax can be used for rich text representation.
+        /// </summary>
+        public string Description;
 
-        public string TermsOfService { get; set; }
+        /// <summary>
+        /// The Terms of Service for the API.
+        /// </summary>
+        public string TermsOfService;
 
-        //public InfoContact Contact { get; set; }
+        /// <summary>
+        /// The license information for the exposed API.
+        /// </summary>
+        public License License;
 
-        //public InfoLicense License { get; set; }
+        /// <summary>
+        /// The contact information for the exposed API.
+        /// </summary>
+        public Contact Contact;
     }
 }
