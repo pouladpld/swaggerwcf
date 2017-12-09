@@ -58,7 +58,10 @@ namespace SwaggerWcf.Schema2
         [JsonProperty(Required = Required.Always)]
         public Dictionary<string, PathItem> Paths { get; set; }
 
-        //public IEnumerable<Definition> Definitions { get; set; }
+        /// <summary>
+        /// An object to hold data types produced and consumed by operations.
+        /// </summary>
+        public Dictionary<string, SchemaBase> Definitions;
 
         //public SecurityDefinitions SecurityDefinitions { get; set; }
 

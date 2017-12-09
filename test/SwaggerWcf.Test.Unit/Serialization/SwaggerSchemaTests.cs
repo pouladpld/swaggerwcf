@@ -21,9 +21,9 @@ namespace SwaggerWcf.Test.Unit.Serialization
             Assert.NotNull(schema.Info);
             Assert.NotEmpty(schema.Schemes);
             Assert.NotEmpty(schema.Paths);
+            Assert.NotNull(schema.Definitions);
             Assert.NotNull(schema.Tags);
             //Assert.NotNull(schema.SecurityDefinitions); ToDo
-            //Assert.NotNull(schema.Definitions); ToDo
             Assert.NotNull(schema.ExternalDocs);
         }
     }
