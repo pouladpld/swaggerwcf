@@ -61,5 +61,15 @@ namespace SwaggerWcf.Schema2
         //public IEnumerable<Definition> Definitions { get; set; }
 
         //public SecurityDefinitions SecurityDefinitions { get; set; }
+
+        /// <summary>
+        /// A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools' logic. Each tag name in the list MUST be unique.
+        /// </summary>
+        public Tag[] Tags;
+
+        /// <summary>
+        /// Additional external documentation.
+        /// </summary>
+        public ExternalDocumentation ExternalDocs;
     }
 }

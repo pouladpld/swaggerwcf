@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using Newtonsoft.Json;
 using SwaggerWcf.Schema2;
@@ -22,10 +21,10 @@ namespace SwaggerWcf.Test.Unit.Serialization
             Assert.NotNull(schema.Info);
             Assert.NotEmpty(schema.Schemes);
             Assert.NotEmpty(schema.Paths);
-            //Assert.NotNull(schema.Tags); ToDo
+            Assert.NotNull(schema.Tags);
             //Assert.NotNull(schema.SecurityDefinitions); ToDo
             //Assert.NotNull(schema.Definitions); ToDo
-            //Assert.NotNull(schema.ExternalDocs); ToDo
+            Assert.NotNull(schema.ExternalDocs);
         }
     }
 }
