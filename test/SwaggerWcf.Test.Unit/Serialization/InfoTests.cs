@@ -3,14 +3,14 @@ using Newtonsoft.Json.Linq;
 using SwaggerWcf.Schema2;
 using Xunit;
 
-namespace SwaggerWcf.Test.Unit
+namespace SwaggerWcf.Test.Unit.Serialization
 {
-    public class InfoSerializationTests
+    public class InfoTests
     {
         [Fact]
         public void Should_Deserialize_Info()
         {
-            string jsonObject = @"
+            const string jsonObject = @"
             {
               ""title"": ""Swagger Sample App"",
               ""description"": ""This is a sample server Petstore server."",
@@ -88,7 +88,7 @@ namespace SwaggerWcf.Test.Unit
         [Fact]
         public void Should_Deserialize_License()
         {
-            string jsonObject = @"
+            const string jsonObject = @"
             {
               ""name"": ""Apache 2.0"",
               ""url"": ""http://www.apache.org/licenses/LICENSE-2.0.html""
@@ -126,7 +126,7 @@ namespace SwaggerWcf.Test.Unit
         [Fact]
         public void Should_Deserialize_Contact()
         {
-            string jsonObject = @"
+            const string jsonObject = @"
             {
               ""name"": ""API Support"",
               ""url"": ""http://www.swagger.io/support"",

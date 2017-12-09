@@ -27,27 +27,27 @@ namespace SwaggerWcf.Schema2
         /// nor sub-paths. It MAY include a port. If the host is not included, the host serving the documentation
         /// is to be used (including the port). The host does not support path templating.
         /// </summary>
-        public string Host { get; set; }
+        public string Host;
 
         /// <summary>
         /// The base path on which the API is served, which is relative to the host. If it is not included,
         /// the API is served directly under the host. The value MUST start with a leading slash (/). The
         /// basePath does not support path templating.
         /// </summary>
-        public string BasePath { get; set; }
+        public string BasePath;
 
         /// <summary>
         /// The transfer protocol of the API. Values MUST be from the list: "http", "https", "ws", "wss". If
         /// the schemes is not included, the default scheme to be used is the one used to access the Swagger
         /// definition itself.
         /// </summary>
-        public IEnumerable<Scheme> Schemes { get; set; }
+        public IEnumerable<Scheme> Schemes;
 
         /// <summary>
         /// A list of MIME types the APIs can consume. This is global to all APIs but can be overridden on
         /// specific API calls. Value MUST be as described under Mime Types.
         /// </summary>
-        public string[] Consumes { get; set; }
+        public string[] Consumes;
 
         /// <summary>
         /// A list of MIME types the APIs can produce. This is global to all APIs but can be overridden on
@@ -58,8 +58,8 @@ namespace SwaggerWcf.Schema2
         [JsonProperty(Required = Required.Always)]
         public Dictionary<string, PathItem> Paths { get; set; }
 
-        public IEnumerable<Definition> Definitions { get; set; }
+        //public IEnumerable<Definition> Definitions { get; set; }
 
-        public SecurityDefinitions SecurityDefinitions { get; set; }
+        //public SecurityDefinitions SecurityDefinitions { get; set; }
     }
 }

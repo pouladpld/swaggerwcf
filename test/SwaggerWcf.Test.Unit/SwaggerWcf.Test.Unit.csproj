@@ -17,4 +17,10 @@
     <ProjectReference Include="..\..\src\SwaggerWcf.Schema\SwaggerWcf.Schema2.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Files\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
