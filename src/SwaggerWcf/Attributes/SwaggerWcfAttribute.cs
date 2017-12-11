@@ -20,6 +20,7 @@ namespace SwaggerWcf.Attributes
         /// </summary>
         public SwaggerWcfAttribute()
         {
+            BasePath = string.Empty;
         }
 
         /// <summary>
