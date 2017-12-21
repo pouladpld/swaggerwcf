@@ -65,9 +65,9 @@ namespace SwaggerWcf.Support
             if (schema.TypeFormat.IsPrimitiveType)
                 return null;
 
-            if (schema.TypeFormat.Type == ParameterType.Integer && schema.TypeFormat.Format == "enum")
+            if (schema.TypeFormat.Type == ParameterType.String && schema.TypeFormat.Format == "enum")
             {
-                schema.Enum = new List<int>();
+                schema.Enum = new List<string>();
 
                 Type propType = definitionType;
 
@@ -253,9 +253,9 @@ namespace SwaggerWcf.Support
                 }
             }
 
-            if (prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum")
+            if (prop.TypeFormat.Type == ParameterType.String && prop.TypeFormat.Format == "enum")
             {
-                prop.Enum = new List<int>();
+                prop.Enum = new List<string>();
 
                 Type propType = propertyInfo.PropertyType;
 
@@ -324,15 +324,15 @@ namespace SwaggerWcf.Support
             ApplyIfValid(LastValidValue(attrs, a => a._UniqueItems), x => prop.UniqueItems = x.Value);
             ApplyIfValid(LastValidValue(attrs, a => a._MultipleOf), x => prop.MultipleOf = x.Value);
         }
-        
-        private static int GetEnumMemberValue(Type enumType, string enumName)
+
+        private static string GetEnumMemberValue(Type enumType, string enumName)
         {
             if (string.IsNullOrWhiteSpace(enumName))
-                return 0;
+                return null;
             var enumVal = Enum.Parse(enumType, enumName, true);
             var underlyingType = Enum.GetUnderlyingType(enumType);
-            var val = Convert.ChangeType(enumVal, underlyingType);
-            return Convert.ToInt32(val);
+            var value = Convert.ChangeType(enumVal, underlyingType);
+            return Convert.ToString(value);
         }
     }
 }
